@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<!-- PAGE META DATA -->
+
+        <meta charset="utf-8">
+        <meta name="description" content="Site description goes here">
+        <title>Your order | Solent Pizza</title>
+        <link rel="icon" href="img/favicon.png">
+
+<!-- FACEBOOK OPEN GRAPH TAGS -->
+
+    <meta property="og:title" content="title" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+
+<!-- Twitter CARD DATA -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="Page description less than 200 characters">
+    <meta name="twitter:creator" content="@author_handle">
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta name="twitter:image" content="http://www.example.com/image.jpg">
+
+<!-- LINKS TO EXTERNAL FILES -->
+            <link  rel="stylesheet" type="text/css" href="css/normalize.css">
+            <link  rel="stylesheet" type="text/css" href="css/responsive.css">
+            <link  rel="stylesheet" type="text/css" href="css/style.css">
+            <script src="javascript/interactive.js"></script>
+    </head>
+    <body>
+        <div class="main_header clearfix">               
+            <div class="content-wrapper clearfix">
+                <a href="#"><img class="logo" src="img/solent.svg" title="Logo and home link"></a>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div> <!-- END OF CONTENT WRAPPER -->
+        </div> <!-- END OF HEADER -->
+        <div class="main_wrapper clearfix">     
+                <h1>Place your order here</h1>
+
+                <form id="order_form" action="#" method="GET" class="clearfix">
+                    <fieldset id="base">
+                        <legend><h2>Select a pizza base&ast;</h2></legend>
+                            <p><input id="small" type="radio" name="base" value="s"/>
+                            <label for="small">Small - &pound;5.00</label></p>
+                            <p><input id="medium" type="radio" name="base" value="m"/>
+                            <label for="medium">Medium - &pound;7.50</label></p>
+                            <p><input id="large" type="radio" name="base" value="l"/>
+                            <label for="large">Large - &pound;10.00</label></p>
+                            <p><input id="xlarge" type="radio" name="base" value="xl"/>
+                            <label for="xlarge">Large - &pound;12.50</label></p>
+                    </fieldset> <!-- END OF BASES -->
+                    <fieldset id="toppings">
+                        <legend><h2>Select one or more topping</h2></legend>
+                            <p><input type="checkbox" name="topping" value="Cheese"/> Cheese - &pound;0.20</p>
+                            <p><input type="checkbox" name="topping" value="Mushroom"/> Mushroom - &pound;0.54</p>
+                            <p><input type="checkbox" name="topping" value="Ham"/> Ham - &pound;0.50</p>
+                            <p><input type="checkbox" name="topping" value="Anchovies"/> Anchovies - &pound;0.60</p>
+                    </fieldset> <!-- END OF TOPPINGS -->
+                    <fieldset id="extras">
+                        <legend><h2>Extras</h2></legend>
+                            <p><input type="checkbox" name="topping" value="Chips"/> Chips - &pound;1.50</p>
+                            <p><input type="checkbox" name="topping" value="Garlic bread"/> Garlic bread - &pound;2.00</p>
+                    </fieldset>
+                    <fieldset id="delivery_info">
+                        <legend><h2>Delivery information</h2></legend>
+                        <input type="text" name="first_name" placeholder="First name" required="required"/>
+                        <input type="text" name="last_name" placeholder="Last name"/>
+                        <input type="tel" name="mobile" placeholder="Mobile" required="required"/>
+                        <input type="email" name="email" placeholder="Email" required="required"/>
+                        <input type="text" name="address_line_1" placeholder="Address line 1" required="required"/>
+                        <input type="text" name="address_line_2" placeholder="Addr ess line 2"/>
+                        <input type="text" name="town" placeholder="Town"/>
+                        <input type="text" name="city" placeholder="City" required="required">
+                        <input type="text" name="county" placeholder="County"/>
+                        <input type="text" name="country" placeholder="Country" required="required"/>
+                        <input type="text" name="postcode" placeholder="Post Code" required="required"/>
+                        <input type="submit" name="confirm" value="Place order"/>
+                        <input type="reset" name="reset" value="Reset"/>
+                    </fieldset> <!-- END OF DELIVERY INFORMATION -->
+                </form> <!-- END OF FORM -->
+                <div id="summary">
+                    <h2>Order summary</h2>
+                    
+                </div>
+        </div>   <!-- END OF MAIN PAGE -->                       
+        <footer>
+            <div class="content_wrapper">
+                <p>&copy; 2016 <!-- COMPANY NAME --> All rights reserved.</p>
+                <p id="current_date"></p> <!-- PARAGRAPH FOR javascript TIME -->
+            </div> <!-- END OF FOOTER CONTENT -->
+        </footer> 
+    </body>
+</html>

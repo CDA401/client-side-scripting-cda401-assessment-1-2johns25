@@ -1,0 +1,245 @@
+/**************** GENERIC BASE STYLES ****************/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color ;
+    text-decoration: none;
+
+}
+
+.content-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+body {
+  background-color: ;
+}
+
+/**************** MAIN HEADER ****************/
+
+.main_header {
+    background-color: #ff9082;
+    height: 60px;
+}
+
+.logo {
+    display: inline;
+    float: left;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.nav {
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav li a:hover {
+
+}
+
+.nav li a:active {
+
+}
+
+.nav li a:visited {
+
+}
+
+/**************** MAIN BODY STYLING ****************/
+
+.main_wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+form {
+    width: 40%;
+}
+
+.logo {
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+fieldset {
+    border: none;
+}
+
+/**************** HOME PAGE STYLING ****************/
+
+#featured_links li {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+#featured_links p {
+  margin-top: 25%;
+  color: white;
+  font-size: 1.5em;
+}
+
+#featured_links {
+  padding: 0px;
+  float: left;
+  width: 100%;
+}
+
+#featured_links li:first-child {
+  width: 300px;
+  height: 200px;
+  background: url(../img/pizzaplate.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#featured_links li:nth-child(2) {
+  width: 300px;
+  height: 200px;
+  background: url(../img/chips.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#featured_links li:last-child {
+  width: 300px;
+  height: 200px;
+  background: url(../img/board.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/**************** ORDER PAGE STYLING ****************/
+
+#order_form {
+    width: 990px;
+}
+
+#base,
+#toppings,
+#extras {
+    float: left;
+    margin-right: 20px;
+}
+
+#delivery_info {
+    clear: left;
+    width: 500px;
+    margin-right: 0px;
+    float: left;
+}
+
+#summary {
+    position: absolute;
+    float: left;
+    left: 50%;
+    right: ;
+    top: 53%;
+    bottom: ;
+    border: solid 1px black;
+    width: 300px;
+}
+
+#summary h2{
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+#delivery_info input:not([type="reset"]) {
+    margin: 10px 10px 10px 0;
+}
+
+/**************** CONTACT PAGE STYLING ****************/
+
+#map {
+    float: left;
+    margin-bottom: 20px;
+  }
+
+#all_info {
+    float: left;
+    width: 500px;
+
+}
+
+#contact_info li {
+    margin-top: 20px;
+}
+
+#links {
+    padding-left: 20px;
+}
+
+.social_buttons {
+    height: 50px;
+    float: left;
+}
+
+#contact_form {
+    margin: px ;
+    float: left;
+}
+
+#contact_form textarea {
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+/**************** FOOTER STYLING ****************/
+
+footer {
+    background-color: #ff9082;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+
+footer p {
+
+}
+
+.social-links {
+    margin-right: 50px;
+    margin-bottom: 5px;
+}
+
+.social-links img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/**************** OTHER ****************/
