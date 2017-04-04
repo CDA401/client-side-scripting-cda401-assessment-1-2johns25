@@ -101,7 +101,8 @@ fieldset {
 /**************** HOME PAGE STYLING ****************/
 
 #car {
-
+    width: 70%;
+    margin: 0 auto;
 }
 
 #slides {
@@ -113,7 +114,7 @@ fieldset {
 }
 
 #slides img {
-    
+    width: 100%;
 }
 
 #featured_links li {
