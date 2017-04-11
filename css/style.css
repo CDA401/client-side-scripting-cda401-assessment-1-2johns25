@@ -103,18 +103,16 @@ fieldset {
 #car {
     width: 70%;
     margin: 0 auto;
+    position: relative;
 }
 
-#slides {
-
+.slides {
+    display: none;
 }
 
-#slides li {
-
-}
-
-#slides img {
+.slides img {
     width: 100%;
+    height: 400px;
 }
 
 #featured_links li {

@@ -26,8 +26,6 @@ function myDate() {
         };
             return n;
         }
-
-
 myDate();
 
 /**************** IMAGE ROLLOVER ****************/
