@@ -3,6 +3,8 @@
 
 /**************** CLOCK ****************/
 
+function main() {
+
 function myDate() {
     
     var calander = new Date()
@@ -18,7 +20,7 @@ function myDate() {
     minutes = addZero(minutes);
     seconds = addZero(seconds);
     var update = setTimeout(myDate, 1000);
-    document.getElementById("current_date").innerHTML = date_time;
+    document.getElementById("current_date").innerHTML = date_time + " &copy; 2016 Solent Pizza's All rights reserved.";
 }
     function addZero(n) {
         if (n < 10) {
@@ -33,6 +35,22 @@ myDate();
 
 /**************** CAROUSEL ****************/
 
+var theIndex = 0;
+autoCarousel();
+
+function autoCarousel() {
+    var i;
+    var htmlSlides = document.getElementsByClassName("slides");
+    for (i = 0; i < htmlSlides.length; i++) {
+        htmlSlides[i].style.display = "none";
+    }
+    theIndex++;
+    if (theIndex > htmlSlides.length) {
+        theIndex = 1
+        }
+    htmlSlides[theIndex-1].style.display = "block";
+    setTimeout(autoCarousel, 3000);
+}
 
 /**************** CONTACT FORM ****************/
 
@@ -42,27 +60,4 @@ myDate();
 
 /**************** ORDER SUMMARY ****************/
 
-
-/**************** FOR FORM IN LESSON ONLY ****************/
-/*
-
-function main() {
-    console.log("Page has loaded");
-    var form = document.getElementById("demoForm");
-    form.addEventListener("submit",validateForm);
 }
-
-function validateForm(event) {
-    event.preventDefault();
-    console.log("form submitted");
-    var form =document.getElementById("demoForm")
-
-    if(form.userName.value == "") {
-        document.getElementById("nameError").style.display = "block";
-        event.preventDefault(); 
-    } else {
-        document.getElementById("nameError").style.display = "none"
-    }
-
-}
-*/
