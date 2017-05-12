@@ -17,17 +17,10 @@ function myDate() {
     var theDate = date + "/" + month + "/" + year;
     var theTime = hours + ":" + minutes + ":" + seconds;
     var date_time = theTime + " - " + theDate;
-    minutes = addZero(minutes);
-    seconds = addZero(seconds);
     var update = setTimeout(myDate, 1000);
     document.getElementById("current_date").innerHTML = date_time + " &copy; 2016 Solent Pizza's All rights reserved.";
 }
-    function addZero(n) {
-        if (n < 10) {
-            n = "0" + n
-        };
-            return n;
-        }
+
 myDate();
 
 /**************** IMAGE ROLLOVER ****************/
