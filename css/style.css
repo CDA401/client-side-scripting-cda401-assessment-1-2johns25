@@ -112,8 +112,6 @@ fieldset {
     height: 400px;
 }
 
-
-
 #featured_links li {
   display: inline-block;
   margin: 10px;
@@ -133,7 +131,7 @@ fieldset {
 
 }
 
-#featured_links li:first-child {
+#first {
   width: 300px;
   height: 200px;
   background: url(../img/pizzaplate.jpg) no-repeat center;
@@ -141,14 +139,14 @@ fieldset {
   margin-left: 25px;
 }
 
-#featured_links li:nth-child(2) {
+#second {
   width: 300px;
   height: 200px;
   background: url(../img/chips.jpg) no-repeat center;
   background-size: cover;
 }
 
-#featured_links li:last-child {
+#third {
   width: 300px;
   height: 200px;
   background: url(../img/board.jpg) no-repeat center;

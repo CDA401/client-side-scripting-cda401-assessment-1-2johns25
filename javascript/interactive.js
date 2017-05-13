@@ -24,7 +24,34 @@ function myDate() {
 myDate();
 
 /**************** IMAGE ROLLOVER ****************/
+var imageOne;
+var imageTwo;
+var imageThree;
 
+function imageRollover() {
+    var imageOne = document.getElementsById("first");
+    var imageTwo = document.getElementsById("second");
+    var imageThree = document.getElementsById("third");
+
+    imageOne.addEventListener("mouseover", hoverOn);
+    imageOne.addEventListener("mouseout", hoverOff);
+    imageTwo.addEventListener("mouseover", hoverOn);
+    imageTwo.addEventListener("mouseout", hoverOff);
+    imageThree.addEventListener("mouseover", hoverOn);
+    imageThree.addEventListener("mouseout", hoverOff);
+}
+
+function hoverOn() {
+    imageOne.style.backgroundImage = "url('../img/pizzaplateedit.jpg')"
+    imageTwo.style.backgroundImage = "url('../img/chipsedit.jpg')"
+    imageThree.style.backgroundImage = "url('../img/boardedit.jpg')"
+}
+
+function hoverOff() {
+    imageOne.style.backgroundImage = "url('../img/pizzaplate.jpg')"
+    imageOne.style.backgroundImage = "url('../img/chips.jpg')"
+    imageOne.style.backgroundImage = "url('../img/board.jpg')"
+}
 
 /**************** CAROUSEL ****************/
 
