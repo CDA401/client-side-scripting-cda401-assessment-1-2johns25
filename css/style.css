@@ -112,45 +112,32 @@ fieldset {
     height: 400px;
 }
 
-#featured_links li {
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
-}
-
-#featured_links p {
-  margin-top: 25%;
-  color: white;
-  font-size: 1.5em;
-}
 
 #featured_links {
+  margin: 20px auto;  
   padding: 0px;
   float: left;
   width: 100%;
+  margin-left: 20px;
 
 }
 
 #first {
   width: 300px;
   height: 200px;
-  background: url(../img/pizzaplate.jpg) no-repeat center;
-  background-size: cover;
-  margin-left: 25px;
+  margin: 0 10px;
 }
 
 #second {
   width: 300px;
   height: 200px;
-  background: url(../img/chips.jpg) no-repeat center;
-  background-size: cover;
+  margin: 0 10px;
 }
 
 #third {
   width: 300px;
   height: 200px;
-  background: url(../img/board.jpg) no-repeat center;
-  background-size: cover;
+  margin: 0 10px;
 }
 
 /**************** ORDER PAGE STYLING ****************/

@@ -24,14 +24,13 @@ function myDate() {
 myDate();
 
 /**************** IMAGE ROLLOVER ****************/
-var imageOne;
-var imageTwo;
-var imageThree;
+
+imageRollover();
 
 function imageRollover() {
-    var imageOne = document.getElementsById("first");
-    var imageTwo = document.getElementsById("second");
-    var imageThree = document.getElementsById("third");
+    var imageOne = document.getElementById("first");
+    var imageTwo = document.getElementById("second");
+    var imageThree = document.getElementById("third");
 
     imageOne.addEventListener("mouseover", hoverOn);
     imageOne.addEventListener("mouseout", hoverOff);
@@ -41,16 +40,20 @@ function imageRollover() {
     imageThree.addEventListener("mouseout", hoverOff);
 }
 
+/** Hover on **/
+
 function hoverOn() {
-    imageOne.style.backgroundImage = "url('../img/pizzaplateedit.jpg')"
-    imageTwo.style.backgroundImage = "url('../img/chipsedit.jpg')"
-    imageThree.style.backgroundImage = "url('../img/boardedit.jpg')"
+    document.getElementById("first").src ="img/pizzaplateedit.jpg";
+    document.getElementById("second").src ="img/chipsedit.jpg";
+    document.getElementById("third").src ="img/boardedit.jpg";
 }
 
+/** Hover off **/
+
 function hoverOff() {
-    imageOne.style.backgroundImage = "url('../img/pizzaplate.jpg')"
-    imageOne.style.backgroundImage = "url('../img/chips.jpg')"
-    imageOne.style.backgroundImage = "url('../img/board.jpg')"
+    document.getElementById("first").src ="img/pizzaplate.jpg";
+    document.getElementById("second").src ="img/chips.jpg";
+    document.getElementById("third").src ="img/board.jpg";
 }
 
 /**************** CAROUSEL ****************/
