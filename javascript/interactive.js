@@ -3,7 +3,7 @@
 
 /**************** CLOCK ****************/
 
-function main() {
+function main() { // START OF MAIN FUNCTION
 
 function myDate() {
     
@@ -53,4 +53,4 @@ function autoCarousel() {
 
 /**************** ORDER SUMMARY ****************/
 
-}
+} // END OF MAIN FUNCTION
