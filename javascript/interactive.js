@@ -1,5 +1,8 @@
-/**************** JAVASCRIPT ****************/
+/**************** JAVASCRIPT ****************
 
+
+
+*******************************************/
 
 /**************** CLOCK ****************/
 
@@ -40,15 +43,11 @@ function imageRollover() {
     imageThree.addEventListener("mouseout", hoverOff);
 }
 
-/** Hover on **/
-
 function hoverOn() {
     document.getElementById("first").src ="img/pizzaplateedit.jpg";
     document.getElementById("second").src ="img/chipsedit.jpg";
     document.getElementById("third").src ="img/boardedit.jpg";
 }
-
-/** Hover off **/
 
 function hoverOff() {
     document.getElementById("first").src ="img/pizzaplate.jpg";
@@ -78,9 +77,13 @@ function autoCarousel() {
 /**************** CONTACT FORM ****************/
 
 
+
 /**************** ORDER FORM ****************/
 
 
+
 /**************** ORDER SUMMARY ****************/
+
+
 
 } // END OF MAIN FUNCTION
