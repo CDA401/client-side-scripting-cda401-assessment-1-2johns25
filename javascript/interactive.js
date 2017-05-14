@@ -56,7 +56,7 @@ function hoverOff() {
 }
 
 /**************** CAROUSEL ****************/
-
+// fix this because I've got rid of main() function on html page
 var theIndex = 0;
 autoCarousel();
 
@@ -74,7 +74,10 @@ function autoCarousel() {
     setTimeout(autoCarousel, 3000);
 }
 } // END OF MAIN
+
 /**************** CONTACT FORM ****************/
+
+// Core validation
 
 function validationCore() {
 
@@ -120,7 +123,94 @@ if (contactForm.message.value == "") {
 
 }
 
+// Intermediate and advanced validation
 
+function validationInt() {
+
+    var contactForm = document.getElementById("contact_form");
+    contactForm.firstname.addEventListener("blur", validateFirstName);
+    contactForm.lastname.addEventListener("blur", validateSecondName);
+    contactForm.email.addEventListener("blur", validateEmail);
+    contactForm.message.addEventListener("blur", validateMessage);
+
+    contactForm.addEventListener("submit", validationInt);
+}
+
+function validateForm(event) {
+    if (validateFirstName() == "" || validateSecondName() == "" || validatEmail() == "" || validateMessage() == "") {
+        event.preventDefault(); 
+    }
+
+    event.preventDefault();
+}
+
+function validateFirstName(event) {
+    var contactForm = document.getElementById("contact_form");
+
+    if (contactForm.firstname.value == "") {
+        contactForm.firstname.style.backgroundColor = "#FF7F7F";
+        document.getElementById("firstNameRed").style.display = "inline-block";
+        document.getElementById("firstNameGreen").style.display = "none";
+        
+        return false;
+    } else {
+        contactForm.firstname.style.backgroundColor = "lightgreen";
+        document.getElementById("firstNameGreen").style.display = "inline-block";
+        document.getElementById("firstNameRed").style.display = "none";
+        return true;
+    }
+}
+
+function validateSecondName(event) {
+    var contactForm = document.getElementById("contact_form");
+
+    if (contactForm.lastname.value == "") {
+        contactForm.lastname.style.backgroundColor = "#FF7F7F";
+        document.getElementById("lastNameRed").style.display = "inline-block";
+        document.getElementById("lastNameGreen").style.display = "none";
+        
+        return false;
+    } else {
+        contactForm.lastname.style.backgroundColor = "lightgreen";
+        document.getElementById("lastNameGreen").style.display = "inline-block";
+        document.getElementById("lastNameRed").style.display = "none";
+        return true;
+    }
+}
+
+function validateEmail(event) {
+    var contactForm = document.getElementById("contact_form");
+
+    if (contactForm.email.value == "") {
+        contactForm.email.style.backgroundColor = "#FF7F7F";
+        document.getElementById("emailRed").style.display = "inline-block";
+        document.getElementById("emailGreen").style.display = "none";
+        
+        return false;
+    } else {
+        contactForm.email.style.backgroundColor = "lightgreen";
+        document.getElementById("emailGreen").style.display = "inline-block";
+        document.getElementById("emailRed").style.display = "none";
+        return true;
+    }
+}
+
+function validateMessage(event) {
+    var contactForm = document.getElementById("contact_form");
+
+    if (contactForm.message.value == "") {
+        contactForm.message.style.backgroundColor = "#FF7F7F";
+        document.getElementById("messageRed").style.display = "inline-block";
+        document.getElementById("messageGreen").style.display = "none";
+        
+        return false;
+    } else {
+        contactForm.message.style.backgroundColor = "lightgreen";
+        document.getElementById("messageGreen").style.display = "inline-block";
+        document.getElementById("messageRed").style.display = "none";
+        return true;
+    }
+}
 
 /**************** ORDER FORM ****************/
 

@@ -32,7 +32,7 @@
             <link  rel="stylesheet" type="text/css" href="css/style.css">
             <script src="javascript/interactive.js"></script>
     </head>
-    <body onload="validationCore()">
+    <body onload="validationCore(); validationInt();">
         <div class="main_header clearfix">
             <div class="content-wrapper clearfix">
                 <a href="#"><img class="logo" src="img/solent.svg" title="Logo and home link"></a>
@@ -65,17 +65,17 @@
                     <li><a href="https://www.instagram.com"><img class="social_buttons" src="img/instagram.svg" alt="Instagram social button"/></a></li>
                 </ul>
                 </div> <!-- END OF CONTACT INFO -->
-               <form id="contact_form" onsubmit="return coreFormValidation"> <!-- START OF CONTACT FORM -->
+               <form id="contact_form" onsubmit="return validationInt"> <!-- START OF CONTACT FORM -->
                    <fieldset>
                        <legend><h2>Write to us</h2></legend>
-                        <p><input type="text" name="firstname" placeholder="First name*"/></p>
+                        <p><input type="text" name="firstname" placeholder="First name*"/><img id="firstNameGreen" src="img/greentick.svg"> <img id="firstNameRed" src="img/redtick.svg"></p> 
                         <p id="errorMessageFirst">This field is empty.</p>
-                        <p><input type="text" name="lastname" placeholder="Last name*"/></p>
+                        <p><input type="text" name="lastname" placeholder="Last name*"/><img id="lastNameGreen" src="img/greentick.svg"> <img id="lastNameRed" src="img/redtick.svg"></p>
                         <p id="errorMessageSecond">This field is empty.</p>
                         <p><input type="tel" name="number" placeholder="Number"/></p>
-                        <p><input type="email" name="email" placeholder="Email*"/></p>
+                        <p><input type="email" name="email" placeholder="Email*"/><img id="emailGreen" src="img/greentick.svg"> <img id="emailRed" src="img/redtick.svg"></p>
                         <p id="errorMessageEmail">This field is empty.</p>
-                        <p><textarea name="message" cols="40" row="40" placeholder="Enter your message here*"></textarea><br>
+                        <p><textarea name="message" cols="40" row="20" placeholder="Enter your message here*"></textarea><img id="messageGreen" src="img/greentick.svg"><img id="messageRed" src="img/redtick.svg"><br>
                         <p id="errorMessage">This field is empty.</p>
                         <input type="submit" name="confirm" value="Send message"/>
                    </fieldset>

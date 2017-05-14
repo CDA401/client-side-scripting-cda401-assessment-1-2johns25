@@ -208,7 +208,7 @@ fieldset {
 }
 
 #contact_form {
-    margin: px ;
+    width: 500px ;
     float: left;
 }
 
@@ -228,6 +228,18 @@ textarea {
     color: red;
     display: none;
 }
+
+#firstNameGreen,
+#firstNameRed,
+#lastNameGreen,
+#lastNameRed,
+#emailGreen,
+#emailRed,
+#messageGreen,
+#messageRed {
+    display: none;
+}
+
 
 /**************** FOOTER STYLING ****************/
 
