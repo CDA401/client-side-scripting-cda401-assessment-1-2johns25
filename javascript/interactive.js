@@ -214,10 +214,10 @@ function validateMessage(event) {
 
 /**************** ORDER FORM ****************/
 
+// Core validation
 
+// Real time total
 
-/**************** ORDER SUMMARY ****************/
+// Additional toppings and extras 
 
-
-
- // END OF MAIN FUNCTION
+// Order summary
