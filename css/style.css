@@ -220,6 +220,15 @@ textarea {
     resize: none;
 }
 
+#errorMessageFirst,
+#errorMessageSecond,
+#errorMessageEmail,
+#errorMessage
+ {
+    color: red;
+    display: none;
+}
+
 /**************** FOOTER STYLING ****************/
 
 footer {
