@@ -73,8 +73,52 @@ function autoCarousel() {
     htmlSlides[theIndex-1].style.display = "block";
     setTimeout(autoCarousel, 3000);
 }
-
+} // END OF MAIN
 /**************** CONTACT FORM ****************/
+
+function validationCore() {
+
+    var contactForm = document.getElementById("contact_form");
+    contactForm.addEventListener("submit", coreFormValidation);
+}
+
+function coreFormValidation(event) {
+    var valid = true;
+    var contactForm = document.getElementById("contact_form");
+
+    if (contactForm.firstname.value == "") {
+        valid = false;
+        document.getElementById("errorMessageFirst").style.display = "block";
+        event.preventDefault();
+    } else {
+        document.getElementById("errorMessageFirst").style.display = "none";
+    }
+
+    if (contactForm.lastname.value == "") {
+        valid = false;
+        document.getElementById("errorMessageSecond").style.display = "block";
+        event.preventDefault();
+    } else {
+        document.getElementById("errorMessageSecond").style.display = "non";
+    }
+
+    if (contactForm.email.value == "") {
+        valid = false;
+        document.getElementById("errorMessageEmail").style.display = "block";
+        event.preventDefault();
+    } else {
+        document.getElementById("errorMessageEmail").style.display = "non";
+    }
+
+if (contactForm.message.value == "") {
+        valid = false;
+        document.getElementById("errorMessage").style.display = "block";
+        event.preventDefault();
+    } else {
+        document.getElementById("errorMessage").style.display = "non";
+    }
+
+}
 
 
 
@@ -86,4 +130,4 @@ function autoCarousel() {
 
 
 
-} // END OF MAIN FUNCTION
+ // END OF MAIN FUNCTION
