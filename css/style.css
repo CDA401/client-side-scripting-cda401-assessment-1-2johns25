@@ -153,6 +153,11 @@ fieldset {
     margin-right: 20px;
 }
 
+input[name="topping"],
+input[name="extras"] {
+    margin-bottom: 10px;
+}
+
 #delivery_info {
     clear: left;
     width: 500px;
@@ -179,6 +184,11 @@ fieldset {
 
 #delivery_info input:not([type="reset"]) {
     margin: 10px 10px 10px 0;
+}
+
+#errorMessage2 {
+    display: none;
+    color: red;
 }
 
 /**************** CONTACT PAGE STYLING ****************/

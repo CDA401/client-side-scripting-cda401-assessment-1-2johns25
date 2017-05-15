@@ -216,8 +216,20 @@ function validateMessage(event) {
 
 // Core validation
 
+function orderValidation() {
+    var orderForm = document.getElementById("order_form");
+    orderForm.addEventListener("change", formChanged) // change name of 2nd parameter function
+}
+
+function checkboxValidation(event) { // change name of function
+    var orderForm = document.getElementById("order_form");
+
+}
+
 // Real time total
 
 // Additional toppings and extras 
 
 // Order summary
+
+/**************** END OF JAVASCRIPT ****************/
