@@ -32,7 +32,7 @@
             <link  rel="stylesheet" type="text/css" href="css/style.css">
             <script src="javascript/interactive.js"></script>
     </head>
-    <body onload="orderValidation()">
+    <body onload="orderValidation(); total();">
         <div class="main_header clearfix">               
             <div class="content-wrapper clearfix">
                 <a href="#"><img class="logo" src="img/solent.svg" title="Logo and home link"></a>
@@ -49,26 +49,26 @@
                 <form id="order_form" class="clearfix" onsubmit="return orderValidation">
                     <fieldset id="bases">
                         <legend><h2>Select a pizza base&ast;</h2></legend>
-                            <p><input id="small" type="radio" name="base" value="s" data-price ="5.00"/>
-                            <label for="small">Small - <span class="price">&pound;5.00</span></label></p>
-                            <p><input id="medium" type="radio" name="base" value="m" data-price ="7.50"/>
-                            <label for="medium">Medium - <span class="price">&pound;7.50</span></label></p>
-                            <p><input id="large" type="radio" name="base" value="l" data-price ="10.00"/>
-                            <label for="large">Large - <span class="price">&pound;10.00</span></label></p>
-                            <p><input id="xlarge" type="radio" name="base" value="xl" data-price ="12.50"/>
-                            <label for="xlarge">Large - <span class="price">&pound;12.50</span></label></p>
+                            <p><input id="small" type="radio" name="base" value="s" data-price ="5.00" data-desc="Small pizza"/>
+                            <label for="small">Small - &pound;<span class="price">5.00</span></label></p>
+                            <p><input id="medium" type="radio" name="base" value="m" data-price ="7.50" data-desc="Medium pizza"/>
+                            <label for="medium">Medium - &pound;<span class="price">7.50</span></label></p>
+                            <p><input id="large" type="radio" name="base" value="l" data-price ="10.00" data-desc="Large pizza"/>
+                            <label for="large">Large - &pound;<span class="price">10.00</span></label></p>
+                            <p><input id="xlarge" type="radio" name="base" value="xl" data-price ="12.50" data-desc="Extra large pizza"/>
+                            <label for="xlarge">Large - &pound;<span class="price">12.50</span></label></p>
                     </fieldset> <!-- END OF BASES -->
                     <fieldset id="toppings">
                         <legend><h2>Select one or more topping*</h2></legend>
-                            <input type="radio" name="topping" value="cheese" data-price ="0.20"/> Cheese - <span class="price">&pound;0.20</span><br>
-                            <input type="radio" name="topping" value="mushroom" data-price ="0.54"/> Mushroom - <span class="price">&pound;0.54</span><br>
-                            <input type="radio" name="topping" value="ham" data-price ="0.50"/> Ham - <span class="price">&pound;0.50</span><br>
-                            <input type="radio" name="topping" value="anchovies" data-price ="0.60"/> Anchovies - <span class="price">&pound;0.60</span><br>
+                            <input type="radio" name="topping" value="cheese" data-price ="0.20" data-desc="Cheese"/> Cheese - &pound;<span class="price">0.20</span><br>
+                            <input type="radio" name="topping" value="mushroom" data-price ="0.54" data-desc="Mushroom"/> Mushroom - &pound;<span class="price">0.54</span><br>
+                            <input type="radio" name="topping" value="ham" data-price ="0.50" data-desc="Ham"/> Ham - &pound;<span class="price">0.50</span><br>
+                            <input type="radio" name="topping" value="anchovies" data-price ="0.60" data-desc="Anchovies"/> Anchovies - &pound;<span class="price">0.60</span><br>
                     </fieldset> <!-- END OF TOPPINGS -->
                     <fieldset id="extras">
                         <legend><h2>Extras</h2></legend>
-                            <input type="checkbox" name="extras" value="chips" data-price ="1.50"/> Chips - <span class="price">&pound;1.50</span><br>
-                            <input type="checkbox" name="extras" value="garlic bread" data-price ="2.00"/> Garlic bread - <span class="price">&pound;2.00</span><br>
+                            <input type="checkbox" name="extras" value="chips" data-price ="1.50" data-desc="Chips"/> Chips - &pound;<span class="price">1.50</span><br>
+                            <input type="checkbox" name="extras" value="garlic bread" data-price ="2.00" data-desc="Garlic bread"/> Garlic bread - &pound;<span class="price">2.00</span><br>
                     </fieldset>
                     <fieldset id="delivery_info">
                         <legend><h2>Delivery information</h2></legend>
@@ -90,6 +90,7 @@
                 <p id="errorMessage2">Please check your order. You need to have atleast one pizza base and one topping selected.</p>
                 <div id="summary">
                     <h2>Order summary</h2>
+                    <p id="selection"><p>
                     <p id="total">Total: <span id="inputTotal"></span></p>
                 </div>
         </div>   <!-- END OF MAIN PAGE -->                       

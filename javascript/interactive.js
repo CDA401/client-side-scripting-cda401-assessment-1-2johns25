@@ -4,7 +4,7 @@
 
 *******************************************/
 
-/**************** PERSONALISED CONTENT ****************/
+/**************** PERSONALISED DYNAMIC CONTENT ****************/
 
 function hello() {
    var response = window.prompt("Hello, what is your name?");
@@ -237,27 +237,38 @@ function validateForms(event) {
         event.preventDefault(); 
     } else {
         console.log("Order placed");
+        document.getElementById("errorMessage2").style.display = "none";
     }
-}
-/*
-function validateBases(event) {
-    var orderForm = document.getElementById("order_form");
-        if (orderForm.base.value == "") {
-            document.getElementById("errorMessage2").style.display = "block";
-        } 
 }
 
-function validateToppings(event) {
-    var orderForm = document.getElementById("order_form");
-        if (orderForm.topping.value == "") {
-            document.getElementById("errorMessage2").style.display = "block";
+// Real time total
+
+function total() {
+    var totalForm = document.getElementById("order_form");
+    totalForm.addEventListener("change", totalUpdate);
+}
+
+function totalUpdate(event) {
+    var totalForm = document.getElementById("order_form");
+    var total = 0;
+    var choices = ""
+
+    for(var index = 0; index < totalForm.extras.length; index++) {
+
+        if (totalForm.extras[index].checked) {
+        var itemPrice = parseInt(totalForm.extras[index].dataset.price);
+        total = total + itemPrice;
+        document.getElementById("selection").innerHTML = choices;
+        document.getElementById("inputTotal").innerHTML = itemPrice;
+        }
+        
     }
 }
-*/
-// Real time total
 
 // Additional toppings and extras 
 
 // Order summary
+
+
 
 /**************** END OF JAVASCRIPT ****************/
