@@ -169,9 +169,7 @@ input[name="extras"] {
     position: absolute;
     float: left;
     left: 50%;
-    right: ;
     top: 53%;
-    bottom: ;
     border: solid 1px black;
     width: 300px;
 }
