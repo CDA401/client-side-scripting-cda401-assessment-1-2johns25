@@ -32,7 +32,7 @@
             <link  rel="stylesheet" type="text/css" href="css/style.css">
             <script src="javascript/interactive.js"></script>
     </head>
-    <body onload="main()">
+    <body onload="orderValidation()">
         <div class="main_header clearfix">               
             <div class="content-wrapper clearfix">
                 <a href="#"><img class="logo" src="img/solent.svg" title="Logo and home link"></a>
@@ -46,8 +46,8 @@
         <div class="main_wrapper clearfix">     
                 <h1>Place your order here</h1>
 
-                <form id="order_form" action="#" method="GET" class="clearfix" onsubmit="return orderValidation">
-                    <fieldset id="base">
+                <form id="order_form" class="clearfix" onsubmit="return orderValidation">
+                    <fieldset id="bases">
                         <legend><h2>Select a pizza base&ast;</h2></legend>
                             <p><input id="small" type="radio" name="base" value="s" data-price ="5.00"/>
                             <label for="small">Small - <span class="price">&pound;5.00</span></label></p>

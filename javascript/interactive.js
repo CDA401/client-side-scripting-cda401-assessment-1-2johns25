@@ -4,9 +4,16 @@
 
 *******************************************/
 
-/**************** CLOCK ****************/
+/**************** PERSONALISED CONTENT ****************/
 
-function main() { // START OF MAIN FUNCTION
+function hello() {
+   var response = window.prompt("Hello, what is your name?");
+   document.getElementById("userName").innerHTML = response;
+}
+
+function main() {
+
+/**************** CLOCK ****************/
 
 function myDate() {
     
@@ -73,8 +80,7 @@ function autoCarousel() {
     htmlSlides[theIndex-1].style.display = "block";
     setTimeout(autoCarousel, 3000);
 }
-} // END OF MAIN
-
+}
 /**************** CONTACT FORM ****************/
 
 // Core validation
@@ -218,14 +224,17 @@ function validateMessage(event) {
 
 function orderValidation() {
     var orderForm = document.getElementById("order_form");
-    orderForm.addEventListener("change", formChanged) // change name of 2nd parameter function
+    orderForm.addEventListener("submit", validateBases); 
 }
 
-function checkboxValidation(event) { // change name of function
+function validateBases(event) {
     var orderForm = document.getElementById("order_form");
-
-}
-
+        if (orderForm.base.value == "") {
+            document.getElementById("errorMessage2").style.display = "block";
+        } else {
+            console.log("should submit");
+        }
+    }
 // Real time total
 
 // Additional toppings and extras 
