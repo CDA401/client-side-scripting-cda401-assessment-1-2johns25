@@ -224,17 +224,36 @@ function validateMessage(event) {
 
 function orderValidation() {
     var orderForm = document.getElementById("order_form");
-    orderForm.addEventListener("submit", validateBases); 
+    order_form.addEventListener("submit", validateForms);
+
 }
 
+function validateForms(event) {
+    var valid = true;
+    var orderForm = document.getElementById("order_form");
+    if (orderForm.base.value == "" || orderForm.topping.value == "") {
+        valid = false;
+        document.getElementById("errorMessage2").style.display = "block";
+        event.preventDefault(); 
+    } else {
+        console.log("Order placed");
+    }
+}
+/*
 function validateBases(event) {
     var orderForm = document.getElementById("order_form");
         if (orderForm.base.value == "") {
             document.getElementById("errorMessage2").style.display = "block";
-        } else {
-            console.log("should submit");
-        }
+        } 
+}
+
+function validateToppings(event) {
+    var orderForm = document.getElementById("order_form");
+        if (orderForm.topping.value == "") {
+            document.getElementById("errorMessage2").style.display = "block";
     }
+}
+*/
 // Real time total
 
 // Additional toppings and extras 
